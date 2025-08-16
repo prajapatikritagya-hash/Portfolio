@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kritagya Kumar — The Funny Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-bubble">👋</div>
+  <header class="topbar">
+    <div class="brand">Kritagya<span class="dot">.</span></div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="avatar" src="assets/profile.png" alt="Kritagya photo">
+      <h1>Hi — I'm <span>Kritagya Kumar</span></h1>
+      <p class="tagline">21 y/o • B.Tech CSE (AI & ML) @ ABES EC, Ghaziabad</p>
+      <p class="funline">I make machines learn, websites behave, and coffee vanish.</p>
+      <div class="cta-row">
+        <a class="btn" href="#projects">See my hilarious projects</a>
+        <a class="btn ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=prajapatikritagya@gmail.com" target="_blank">Email me (seriously)</a>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About — short & spicy</h2>
+      <p>I'm Kritagya Kumar, a B.Tech student who trains models by day and breaks them by night. Proudly from <strong>Noida, India</strong>. My hobbies include debugging code that previously worked and giving variables dramatic names.</p>
+      <ul class="meta-list">
+        <li>📧 <a href="mailto:prajapatikritagya@gmail.com">prajapatikritagya@gmail.com</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/kritagya-kumar-a4b950295" target="_blank">LinkedIn</a></li>
+        <li>🐙 <a href="https://github.com/prajapatikritagya-hash" target="_blank">GitHub</a></li>
+        <li>📸 <a href="https://instagram.com/kritagyaprajapati" target="_blank">Instagram</a></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Skills (not made up)</h2>
+      <div class="chips">
+        <span>Python</span><span>Machine Learning</span><span>OpenCV</span><span>HTML/CSS</span><span>JavaScript</span><span>Git</span>
+      </div>
+      <p class="small">Also good at: Googling errors and pretending the fix was obvious.</p>
+    </section>
+
+    <section id="projects" class="panel projects">
+      <h2>Projects — rated by me (and my mom)</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/project1.png" alt="Project 1">
+          <h3>Hostel Allotment System</h3>
+          <p>Students choose rooms, chaos reduced by 70% (estimate). Built with HTML/CSS/JS and a sprinkle of optimism.</p>
+          <a class="link" href="#" onclick="toast('Repo coming soon!')">View repo</a>
+        </article>
+        <article class="card">
+          <img src="assets/project2.png" alt="Project 2">
+          <h3>ML Classifier</h3>
+          <p>A happy little classifier that predicts things. Accuracy: depends on the dataset mood.</p>
+          <a class="link" href="#" onclick="toast('Model sleeps now')">Read more</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact — bribe me with cookies</h2>
+      <p>Location: <strong>Noida, India</strong></p>
+      <form class="contact-form" onsubmit="event.preventDefault(); toast('Message sent (virtually) — I will reply!)')">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="Type your message..."></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Big Digital Clock Section -->
+<section id="big-clock" class="clock-section">
+  <!-- looping video background -->
+  <video class="clock-video" autoplay muted loop playsinline preload="auto">
+    <source src="assets/clock-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- overlay to make time visible -->
+  <div class="clock-overlay"></div>
+
+  <!-- digital clock -->
+  <div id="clock" class="clock-face" data-text=""></div>
+</section>
+
+
+
+  <footer class="foot">
+    <p>© <span id="yr"></span> Kritagya Kumar — Made with ☕ & code</p>
+    <p class="tiny">Note: this site is funny. Content may contain puns.</p>
+  </footer>
+
+  <!-- toast + popups -->
+  <div id="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
